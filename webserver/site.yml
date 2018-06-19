@@ -1,0 +1,15 @@
+---
+  - name: patching all servers
+    hosts: all
+    become: yes
+
+    roles:
+    - common
+
+  - name: Configure and deploy on Web Servers
+    hosts: all
+    become: yes
+
+    roles:
+    - apache
+
